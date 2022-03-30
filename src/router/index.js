@@ -26,6 +26,11 @@ const routes = [
         path: 'roles',
         name: 'roles',
         component: () => import('@/views/roles/index.vue')
+      },
+      {
+        path: 'pdf',
+        name: 'pdf',
+        component: () => import('@/views/pdf/index.vue')
       }
     ]
   }

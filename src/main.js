@@ -8,6 +8,7 @@ import '@/router/permission'
 import * as ElIcons from '@element-plus/icons-vue'
 import i18n from '@/i18n'
 import filters from './utils/filters'
+import 'element-plus/dist/index.css'
 
 const app = createApp(App)
 for (const iconName in ElIcons) {

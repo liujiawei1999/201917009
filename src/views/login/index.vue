@@ -4,13 +4,17 @@
       <div class="title-container">
         <h3 class="title">{{ $t('login.title') }}</h3>
       </div>
-      <el-form-item prop="userName">
-        <svg-icon icon="user" class="svg-container"></svg-icon>
-        <el-input
-          v-model="loginForm.userName"
-          placeholder="请输入用户名"
-        ></el-input>
-      </el-form-item>
+
+      <el-form>
+        <el-form-item prop="userName">
+          <svg-icon icon="user" class="svg-container"></svg-icon>
+          <el-input
+            v-model="loginForm.userName"
+            placeholder="请输入用户名"
+          ></el-input>
+        </el-form-item>
+      </el-form>
+
       <el-form-item prop="password">
         <svg-icon icon="password" class="svg-container"></svg-icon>
         <el-input
@@ -23,6 +27,7 @@
           @click="onChangePwdType"
         ></svg-icon>
       </el-form-item>
+
       <el-form>
         <el-row>
           <el-col :span="16">

@@ -11,7 +11,7 @@
     "server": "nodemon index.js --ignore client"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^1.1.1",
+    "@element-plus/icons-vue": "^1.1.4",
     "axios": "^0.26.0",
     "core-js": "^3.6.5",
     "driver.js": "^0.9.8",
@@ -19,6 +19,7 @@
     "screenfull": "^5.1.0",
     "vue": "^3.2.8",
     "vue-i18n": "^9.2.0-beta.32",
+    "vue-pdf": "^4.3.0",
     "vue-router": "^4.0.11",
     "vuex": "^4.0.2"
   },
