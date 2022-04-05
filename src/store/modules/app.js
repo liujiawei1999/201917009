@@ -7,12 +7,16 @@ export default {
   state: () => ({
     token: localStorage.getItem('token') || '',
     siderType: true,
-    lang: localStorage.getItem('lang') || 'zh'
+    lang: localStorage.getItem('lang') || 'zh',
+    userInfo: ''
   }),
   mutations: {
     setToken(state, token) {
       state.token = token
       localStorage.setItem('token', token)
+    },
+    setUserinfo(state, userInfo) {
+      localStorage.setItem('userInfo', JSON.stringify(userInfo))
     },
     changeSiderType(state) {
       state.siderType = !state.siderType
@@ -28,10 +32,13 @@ export default {
           .then((res) => {
             console.log(res)
             if (res.data.status === 200) {
-              commit('setToken', res.data.object)
+              commit('setToken', res.data.object.uuid)
+              commit('setUserinfo', res.data.object.userInfo)
               setTokenTime()
               router.replace('/')
               resolve()
+            } else {
+
             }
           })
           .catch((err) => {
@@ -41,6 +48,7 @@ export default {
     },
     logout({ commit }) {
       commit('setToken', '')
+      commit('setUserinfo', '')
       localStorage.clear()
       router.replace('/login')
     }
