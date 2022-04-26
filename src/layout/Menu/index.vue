@@ -72,8 +72,9 @@ const menusList = ref([])
 const initMenuList = async () => {
   const userInfo = JSON.parse(localStorage.getItem('userInfo'))
   console.log(userInfo)
+  console.log(userInfo.value)
   // 可以根据用户信息来查询页面
-  const res = await menuList()
+  const res = await menuList(userInfo)
   menusList.value = res.data.object
   console.log(res)
 }

@@ -5,7 +5,10 @@ import store from '@/store'
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
-  timeout: 5000
+  timeout: 5000,
+  headers: {
+    token: localStorage.getItem('token')
+  }
 })
 
 service.interceptors.request.use(
