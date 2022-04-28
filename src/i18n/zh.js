@@ -29,7 +29,16 @@ export default {
     action: '操作',
     search: '搜索',
     adduser: '添加用户',
-    placeholder: '请输入搜索的用户姓名'
+    placeholder: '请输入搜索的用户姓名',
+    community: '院名',
+    building: '楼',
+    floor: '层',
+    root: '房间号',
+    bedId: '床位号',
+    customName: '客户姓名',
+    bedStatus: '是否入住',
+    startTime: '入住时间',
+    endTime: '出院时间'
   },
   message: {
     updeteSuccess: '更新成功'

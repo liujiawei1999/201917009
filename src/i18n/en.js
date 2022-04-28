@@ -29,7 +29,17 @@ export default {
     action: 'action',
     search: 'search',
     adduser: 'add user',
-    placeholder: 'Please enter a user name to search for'
+    placeholder: 'Please enter a user name to search for',
+    community: 'community',
+    building: 'building',
+    floor: 'floor',
+    root: 'root',
+    bedId: 'bedId',
+    customName: 'customName',
+    bedStatus: 'bedStatus',
+    startTime: 'startTime',
+    endTime: 'endTime'
+
   },
   message: {
     updeteSuccess: 'update successfully'

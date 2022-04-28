@@ -5,10 +5,7 @@ import store from '@/store'
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
-  timeout: 5000,
-  headers: {
-    token: localStorage.getItem('token')
-  }
+  timeout: 5000
 })
 
 service.interceptors.request.use(
@@ -19,6 +16,7 @@ service.interceptors.request.use(
         return Promise.reject(new Error('token失效'))
       }
     }
+    // 请求头设置token
     config.headers.Authorsization = localStorage.getItem('token')
     return config
   },
